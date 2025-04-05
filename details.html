@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supercars Hub | Ferrari SF90 Stradale</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation (same as index.html) -->
+    <nav class="bg-gray-900 py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="index.html" class="text-white text-2xl font-bold">Supercars Hub</a>
+            <ul class="flex space-x-6 text-white">
+                <li><a href="index.html" class="hover:underline">Home</a></li>
+                <li><a href="cars.html" class="hover:underline">Cars</a></li>
+                <li><a href="contact.html" class="hover:underline">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="py-12">
+        <div class="container mx-auto px-4">
+            <!-- Car Name and Price -->
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
+                <div>
+                    <h1 class="text-3xl font-bold">Ferrari SF90 Stradale</h1>
+                    <p class="text-gray-600">The first Ferrari to feature PHEV architecture</p>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <span class="text-2xl font-bold text-red-600">$899,000</span>
+                </div>
+            </div>
+
+            <!-- Gallery and Specs -->
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Gallery -->
+                <div class="lg:w-2/3">
+                    <!-- Main Image -->
+                    <div class="mb-4 rounded-lg overflow-hidden shadow-lg">
+                        <img src="https://images.pexels.com/photos/2127733/pexels-photo-2127733.jpeg" alt="Ferrari SF90 Stradale" class="w-full h-96 object-cover">
+                    </div>
+                    
+                    <!-- Thumbnails -->
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="cursor-pointer">
+                            <img src="https://images.pexels.com/photos/2127733/pexels-photo-2127733.jpeg" alt="Ferrari SF90 Stradale Front" class="w-full h-24 object-cover rounded">
+                        </div>
+                        <div class="cursor-pointer">
+                            <img src="https://images.pexels.com/photos/2127732/pexels-photo-2127732.jpeg" alt="Ferrari SF90 Stradale Side" class="w-full h-24 object-cover rounded">
+                        </div>
+                        <div class="cursor-pointer">
+                            <img src="https://images.pexels.com/photos/2127734/pexels-photo-2127734.jpeg" alt="Ferrari SF90 Stradale Rear" class="w-full h-24 object-cover rounded">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Specifications -->
+                <div class="lg:w-1/3">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h2 class="text-xl font-bold mb-4">Technical Specifications</h2>
+                        <div class="space-y-4">
+                            <div>
+                                <h3 class="font-semibold">Engine</h3>
+                                <p class="text-gray-600">4.0L V8 Twin-Turbo + 3 Electric Motors</p>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold">Power Output</h3>
+                                <p class="text-gray-600">986 hp (combined)</p>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold">Torque</h3>
+                                <p class="text-gray-600">590 lb-ft</p>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold">0-60 mph</h3>
+                                <p class="text-gray-600">2.5 seconds</p>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold">Top Speed</h3>
+                                <p class="text-gray-600">211 mph</p>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold">Transmission</h3>
+                                <p class="text-gray-600">8-speed dual-clutch automatic</p>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold">Drivetrain</h3>
+                                <p class="text-gray-600">All-wheel drive</p>
+                            </div>
+                        </div>
+
+                        <!-- Test Drive Booking Form -->
+                        <div class="mt-8 p-6 bg-gray-50 rounded-lg" id="bookingForm">
+                            <h3 class="text-xl font-bold mb-4">Book a Test Drive</h3>
+                            <form id="testDriveForm" class="space-y-4">
+                                <div>
+                                    <label for="bookingName" class="block text-gray-700 font-medium mb-2">Full Name*</label>
+                                    <input type="text" id="bookingName" name="name" required
+                                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label for="bookingEmail" class="block text-gray-700 font-medium mb-2">Email*</label>
+                                    <input type="email" id="bookingEmail" name="email" required
+                                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label for="bookingPhone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                                    <input type="tel" id="bookingPhone" name="phone"
+                                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label for="bookingCar" class="block text-gray-700 font-medium mb-2">Car Model*</label>
+                                    <input type="text" id="bookingCar" name="car" readonly
+                                        value="Ferrari SF90 Stradale"
+                                        class="w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-lg">
+                                </div>
+                                <div>
+                                    <label for="bookingDate" class="block text-gray-700 font-medium mb-2">Preferred Date*</label>
+                                    <input type="date" id="bookingDate" name="preferredDate" required
+                                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label for="bookingDealer" class="block text-gray-700 font-medium mb-2">Preferred Dealer*</label>
+                                    <select id="bookingDealer" name="dealer" required
+                                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent">
+                                        <option value="">Select a dealer</option>
+                                        <!-- Options will be populated by JavaScript -->
+                                    </select>
+                                </div>
+                                <button type="submit" 
+                                    class="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg font-semibold transition duration-300">
+                                    Confirm Booking
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- Contact Dealer Form -->
+                        <div class="mt-8 p-6 bg-gray-50 rounded-lg hidden" id="contactDealerForm">
+                            <h3 class="text-xl font-bold mb-4">Contact Dealer</h3>
+                            <form id="dealerContactForm" class="space-y-4">
+                                <input type="hidden" id="dealerId" name="dealer">
+                                <div>
+                                    <label for="contactName" class="block text-gray-700 font-medium mb-2">Full Name*</label>
+                                    <input type="text" id="contactName" name="name" required
+                                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label for="contactEmail" class="block text-gray-700 font-medium mb-2">Email*</label>
+                                    <input type="email" id="contactEmail" name="email" required
+                                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label for="contactMessage" class="block text-gray-700 font-medium mb-2">Your Message*</label>
+                                    <textarea id="contactMessage" name="message" rows="4" required
+                                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"></textarea>
+                                </div>
+                                <button type="submit" 
+                                    class="w-full bg-gray-900 hover:bg-gray-800 text-white py-3 rounded-lg font-semibold transition duration-300">
+                                    Send Message
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- Form Toggle Buttons -->
+                        <div class="flex space-x-4 mt-4">
+                            <button id="showBookingFormBtn" 
+                                class="flex-1 bg-red-600 text-white py-2 rounded-lg font-semibold">
+                                Book Test Drive
+                            </button>
+                            <button id="showContactFormBtn" 
+                                class="flex-1 bg-gray-900 text-white py-2 rounded-lg font-semibold">
+                                Contact Dealer
+                            </button>
+                        </div>
+
+                        <!-- Form Handling Script -->
+                        <script>
+                            // Load dealers
+                            async function loadDealers() {
+                                try {
+                                    const response = await fetch('/api/dealers');
+                                    const dealers = await response.json();
+                                    
+                                    const dealerSelect = document.getElementById('bookingDealer');
+                                    dealers.forEach(dealer => {
+                                        const option = document.createElement('option');
+                                        option.value = dealer.id;
+                                        option.textContent = `${dealer.name} (${dealer.location})`;
+                                        dealerSelect.appendChild(option);
+                                    });
+                                } catch (error) {
+                                    console.error('Error loading dealers:', error);
+                                }
+                            }
+
+                            // Form toggle functionality
+                            document.getElementById('showBookingFormBtn').addEventListener('click', () => {
+                                document.getElementById('bookingForm').classList.remove('hidden');
+                                document.getElementById('contactDealerForm').classList.add('hidden');
+                            });
+
+                            document.getElementById('showContactFormBtn').addEventListener('click', () => {
+                                document.getElementById('contactDealerForm').classList.remove('hidden');
+                                document.getElementById('bookingForm').classList.add('hidden');
+                            });
+
+                            // Test drive form submission
+                            document.getElementById('testDriveForm').addEventListener('submit', async (e) => {
+                                e.preventDefault();
+                                const form = e.target;
+                                const formData = new FormData(form);
+                                const data = Object.fromEntries(formData.entries());
+
+                                try {
+                                    const response = await fetch('/api/book-test-drive', {
+                                        method: 'POST',
+                                        headers: {
+                                            'Content-Type': 'application/json'
+                                        },
+                                        body: JSON.stringify(data)
+                                    });
+                                    
+                                    const result = await response.json();
+                                    if (result.success) {
+                                        alert(result.message);
+                                        form.reset();
+                                    } else {
+                                        alert(result.message);
+                                    }
+                                } catch (error) {
+                                    console.error('Error:', error);
+                                    alert('Failed to book test drive. Please try again.');
+                                }
+                            });
+
+                            // Contact form submission
+                            document.getElementById('dealerContactForm').addEventListener('submit', async (e) => {
+                                e.preventDefault();
+                                const form = e.target;
+                                const formData = new FormData(form);
+                                const data = Object.fromEntries(formData.entries());
+
+                                try {
+                                    const response = await fetch('/api/contact', {
+                                        method: 'POST',
+                                        headers: {
+                                            'Content-Type': 'application/json'
+                                        },
+                                        body: JSON.stringify(data)
+                                    });
+                                    
+                                    const result = await response.json();
+                                    if (result.success) {
+                                        alert(result.message);
+                                        form.reset();
+                                    } else {
+                                        alert(result.message);
+                                    }
+                                } catch (error) {
+                                    console.error('Error:', error);
+                                    alert('Failed to send message. Please try again.');
+                                }
+                            });
+
+                            // Initialize
+                            loadDealers();
+                        </script>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <div class="mt-12 bg-white p-8 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-bold mb-4">About the Ferrari SF90 Stradale</h2>
+                <div class="prose max-w-none">
+                    <p class="mb-4">The SF90 Stradale is Ferrari's first series production PHEV (Plug-in Hybrid Electric Vehicle). It represents a true paradigm shift because it's the first Ferrari ever to sport PHEV architecture which sees the internal combustion engine integrated with three electric motors, two of which are independent and located on the front axle, with the third at the rear between the engine and the gearbox.</p>
+                    <p class="mb-4">The car's name encapsulates the true significance of all that has been achieved in terms of performance. The reference to the 90th anniversary of the foundation of Scuderia Ferrari underscores the strong link that has always existed between Ferrari's track and road cars. A brilliant encapsulation of the most advanced technologies developed in Maranello, the SF90 Stradale is also the perfect demonstration of how Ferrari immediately transitions the knowledge and skills it acquires in competition to its production cars.</p>
+                    <p>The SF90 Stradale is also the first Ferrari sports car to be equipped with 4WD, a step necessary to allow the incredible power unleashed by the hybrid powertrain to be fully exploited, thus ensuring the car is still usable by all drivers in all situations.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold">Supercars Hub</h3>
+                    <p class="text-gray-400">The ultimate destination for supercar enthusiasts</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-6 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 Supercars Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
