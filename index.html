@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supercars Hub | Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .hero {
+            background-image: url('https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-gray-900 py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="index.html" class="text-white text-2xl font-bold">Supercars Hub</a>
+            <ul class="flex space-x-6 text-white">
+                <li><a href="index.html" class="hover:underline">Home</a></li>
+                <li><a href="cars.html" class="hover:underline">Cars</a></li>
+                <li><a href="contact.html" class="hover:underline">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero h-screen flex items-center">
+        <div class="container mx-auto px-4 text-white">
+            <h1 class="text-5xl font-bold mb-4">Discover the World's Fastest Supercars</h1>
+            <p class="text-xl mb-8">Experience the pinnacle of automotive engineering and design</p>
+            <a href="cars.html" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold transition duration-300 inline-block">
+                Explore Cars <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Special Offer Countdown -->
+    <section class="py-8 bg-red-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold mb-2">Limited Time Offer!</h2>
+            <p class="mb-4">Exclusive discount on all 2023 models - ends in:</p>
+            <div id="countdown" class="flex justify-center space-x-4 text-2xl font-mono">
+                <div><span id="days">00</span>d</div>
+                <div><span id="hours">00</span>h</div>
+                <div><span id="minutes">00</span>m</div>
+                <div><span id="seconds">00</span>s</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Cars -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Featured Supercars</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="featuredCars">
+                <!-- Car 1 -->
+                <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <img src="https://images.pexels.com/photos/2127733/pexels-photo-2127733.jpeg" alt="Ferrari SF90 Stradale" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Ferrari SF90 Stradale</h3>
+                        <p class="text-gray-600 mb-4">The first Ferrari to feature PHEV (Plug-in Hybrid Electric Vehicle) architecture</p>
+                        <a href="details.html" class="text-red-600 hover:underline font-semibold">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Car 2 -->
+                <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <img src="https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg" alt="Lamborghini Aventador" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Lamborghini Aventador</h3>
+                        <p class="text-gray-600 mb-4">The ultimate expression of Lamborghini's V12 heritage</p>
+                        <a href="details.html" class="text-red-600 hover:underline font-semibold">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Car 3 -->
+                <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <img src="https://images.pexels.com/photos/3972755/pexels-photo-3972755.jpeg" alt="McLaren 720S" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">McLaren 720S</h3>
+                        <p class="text-gray-600 mb-4">Lightweight supercar with breathtaking performance</p>
+                        <a href="details.html" class="text-red-600 hover:underline font-semibold">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">What Our Clients Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John D." class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h3 class="font-bold">John D.</h3>
+                            <p class="text-gray-600 text-sm">Ferrari Owner</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"The test drive experience was incredible! The team was professional and knowledgeable."</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah M." class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h3 class="font-bold">Sarah M.</h3>
+                            <p class="text-gray-600 text-sm">Lamborghini Owner</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"Best supercar selection I've seen. Found my dream car here!"</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Michael T." class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h3 class="font-bold">Michael T.</h3>
+                            <p class="text-gray-600 text-sm">McLaren Owner</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"Exceptional service from start to finish. Highly recommend!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold">Supercars Hub</h3>
+                    <p class="text-gray-400">The ultimate destination for supercar enthusiasts</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-6 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 Supercars Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
